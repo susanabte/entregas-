@@ -24,6 +24,8 @@ public class Program
 		Console.WriteLine("c =" + c);
 		Console.WriteLine("z =" + zDregress);
 		Console.WriteLine("y =" + yDregress);
+
+		
 	}
 }
 

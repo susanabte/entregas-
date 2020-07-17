@@ -6,8 +6,6 @@ public class Program
 	public static void Main()
 	
 {
-	public static void Main()
-{
         //primer ejercicio
         double y = 2;
         double z = 3;

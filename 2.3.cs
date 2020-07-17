@@ -18,7 +18,7 @@ public class Program
         //double yDregress = yRad * 180 / Math.PI;
 	
 		//calculando t
-		double t = Math.Sqrt((2*2)+(z*z));
+		double t = Math.Sqrt((y*y)+(z*z));
         //double tDregress = tRad;
 		
 		Console.WriteLine("a =" + a);
