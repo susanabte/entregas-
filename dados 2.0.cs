@@ -19,8 +19,8 @@ public class Program
 		Console.WriteLine("total:" + total);
 		ronda +=1;
         
-    
-        if (contador == 1)
+        {
+            if (contador == 1)
         {
             if (d1 == 10)
             {
@@ -35,10 +35,8 @@ public class Program
         {
             contador += 1; 
         }
- 
-        
         if (ronda > 3)
-        {
+        
         if (d1%2 != 0)
         {
             total = 0;
@@ -52,7 +50,6 @@ public class Program
 		Console.WriteLine("ganaste!!!! :D :");
         continuar = "n";
         }
-        }
         
         if( continuar == "s") 
         
@@ -63,4 +60,3 @@ public class Program
     }
 }
 }
-
