@@ -1,5 +1,4 @@
-
-    using System;
+ using System;
 					
     public class Program
 
@@ -8,8 +7,8 @@
         {
 
 			Random aleatorio = new Random();
-			int c1 = 0, c2 = 0, nc = 0, total = 0, jugadores = 0;
-			int n = 0, max = 0, ganador = 0;
+			int c1 = 0, c2 = 0, cc = 0, total = 0, jugadores = 0;
+			int n = 0, //max = 0, ganador = 0;
 			string continuar = "n";
 
 			Console.WriteLine("Ingresa el número de jugadores (minimo 2, máximo 5): ");
@@ -48,27 +47,22 @@
 				Console.Write("¿Deseas tomar otra carta? (si/no): ");
 				continuar = Console.ReadLine();
 
-
-
-				if (total > max && total <= 21)
-				{
-					max = total;
-					ganador = jugadores;
-				}
-
-
 				while (continuar == "si")
 				{
-					nc = aleatorio.Next(1, 11);
-					Console.WriteLine("Carta = " + nc);
-					total += nc;
+					cc = aleatorio.Next(1, 11);
+					Console.WriteLine("Carta = " + cc);
+					total += cc;
 					Console.WriteLine("Total = " + total);
 
-					if (total >= 21)
+                    if ( total == 21)
+                    Console.WriteLine("ganaste");
+                    break;
+
+					if (total > 21)
 					{
-						Console.WriteLine("Eres un perdedor, mejor suerte la próxima");
+						Console.WriteLine("Perdiste, mejor suerte la próxima");
 						total = 0;
-						continuar = "n0";
+						continuar = "no";
 					}
 
 					else
@@ -77,18 +71,11 @@
 						continuar = Console.ReadLine();
 					}
 
-					if (total > max && total <= 21)
-					{
-						max = total;
-						ganador = jugadores;
-					}
 				}
 
 				puntajes[jugadores] = total;
 				jugadores++;
 			}
-
-			for (int c = 0; c < players.Length; c++)
 			{
 
 				for (int j = 0; j < players.Length; j++)
@@ -115,6 +102,5 @@
 			Console.WriteLine("¡Eres lo máximo, ganaste!, "+"el ganador fue " + players[n - 1] + " con " + puntajes[n - 1] + " puntos");
 			Console.WriteLine("¡Eres lo máximo!, " + "el segundo lugar fue " + players[n - 2] + " con " + puntajes[n - 2] + " puntos");
 			Console.WriteLine("Gracias por jugar.");
-			Console.WriteLine("¡Hasta la próxima!");
 		}
 	}
